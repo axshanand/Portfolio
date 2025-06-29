@@ -1,0 +1,626 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&display=swap');
+
+
+/*before scroll aishwarya and landing page fonts */
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+    background-color: #c5bfb2; /*background*/
+    color: #28282b; /*font*/
+}
+
+/* html, body {
+    overflow-x: hidden;
+  } */
+
+  
+/*HEAD of home contact etc*/
+#header {
+    width: 20%;
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    transition: top 0.4s ease;
+    margin: 0 auto;
+    height: 12vh;
+    padding-top: 2.5vh;
+}
+/*After scroll color of Aishwarya changes*/
+#header.sticky {
+    top: -5px;
+    color: #f1f1f1; 
+}
+/*After scroll color of line beneath aishwarya changes*/
+#header-line.sticky {
+    background-color: #f1f1f1;
+}
+#header h1 {
+    cursor: pointer;
+    position: relative;
+    /*  background-color: #796e5d; /* background color for the h1 element */
+    /*  padding: 20px; /* increase padding for larger background size */
+    /*  display: inline-block; /* ensure background covers only the text */
+    /*  font-size: 24px; /* adjust font size as needed */
+}
+
+
+/*line beneath aishwarya*/
+#header-line {
+    position: absolute;
+    left: 50%; /* Position the line at the horizontal center of the heading */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 100px;
+    height: 2px;
+    background-color: #28282b;
+    transition: width 0.2s ease;
+}
+
+#header h1:hover + #header-line {
+    width: 150px; /* Increase width on hover */
+}
+/*________________________________________________________________________________________________________________________________________________________________-*/
+/*navigation bar*/
+#navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #28282b;
+    z-index: 100;
+    line-height: 50px;
+    /* background-color: #1f363d; */
+    overflow: hidden;
+    color: #f1f1f1;  /*font color of home about etc*/
+
+}
+
+#navbar ul {
+    /* margin-left: 0px; */
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+
+#navbar ul li {
+    z-index: 101;
+    float: left;
+    text-align: center;
+    height: 100%;
+    width: 150px;
+    font-size: 17px;
+    transition: all 0.4s;
+    line-height: 80px;
+    /* text-decoration: none; */
+}
+
+#navbar ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+/*hover on nav parts*/
+#navbar ul li:hover {
+    background-color: #f1f1f1;
+    color: #28282b;
+    text-decoration: underline;
+}
+
+#player-icon {
+    margin-left: 919px; /*placing of disc R-L*/
+    padding-top: 8px;   /*placing of disc T-D*/
+}
+
+.fa-solid {
+    font-size: 30px;   /*size of disc*/
+}
+
+/*LANDING PAGE*/
+#landing {
+    background-image: url("images/main.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: calc(100vh - 165px);
+    background-position: center -100px;    /*position up down*/
+
+    /* Overlay using pseudo-element */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.107); /* Adjust opacity as needed */
+    }
+} 
+
+/*Langing page TEXTS*/
+#haha {
+    height: calc(100vh - 350px);/*the below page*/
+    width: 28%;   /*spreading of texts*/
+    background-color: transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: 250px;    /*display*/
+    left: 90px;
+}
+
+/*Langing page TEXTS*/
+#haha p {
+    font-family: "DM Serif Display", serif;
+    font-weight: bolder;
+    font-size: 60px;
+    /* color: black; */
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+   }
+
+/*_____________________________________________________________________________________________________________________________________________________________________________-*/
+/* main starts here */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: space-between;
+}
+  /*_________________________________________________________________________________________________________________________________________________________________________________-*/
+  #about-section {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 25rem 20rem;
+    grid-template-rows: 4rem 26rem;
+    grid-column-gap: 1.3rem;
+    grid-template-areas:
+       "header header"
+       "p img";
+}
+#about-section h2 {
+    grid-area: header;
+    margin-left: 20px; 
+    align-self: flex-start;
+    width: 100%;
+}
+#about-section img {
+    grid-area: img;
+    height: 22.825rem;
+    width: auto;
+    margin-top: 0.0rem;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+#about-section img:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
+}
+#about-section p {
+    grid-area: p;
+    text-align: left;
+}
+/*_________________________________________________________________________________________________________________________________________________________________________________-*/
+#feature-section { /* feature-section starts here */
+    display: grid;
+    grid-template-columns: repeat(3, 15rem);
+    grid-template-rows: 10rem 1fr;
+    grid-column-gap: 1.5rem;
+}
+
+#feature-section img {
+    width: 100%;
+    height: 15rem;
+}
+
+#Skills, #Experience, #Honors {
+    content: "";
+}
+
+#Skills:hover, #Experience:hover, #Honors:hover {
+    border: 0.1rem solid beige;
+    transform: scale(1.1);
+}
+
+.options {
+    grid-column: 1 / 4;
+}
+/*_________________________________________________________________________________________________________________________________________________________________________________-*/
+/* Skill section CSS */
+#skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150vh; /* more space so scroll happens inside */
+    margin-top: 20rem;
+    margin-bottom: 3rem;
+    padding: 0 20px;
+    position: relative;
+    background-color: #c5bfb2;
+    overflow: hidden;
+}
+
+
+/* Navigation heading */
+.exp-nav {
+    font-size: 2rem;
+    color: #28282b;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.exp-nav:hover {
+    opacity: 0.7;
+}
+  
+/* TV Outer Body (WIDER) */
+/* TV Outer Body */
+.tv-body {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background-color: #28282b;
+    border-radius: 20px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    margin: auto;
+  }
+  
+  /* TV Screen with visible scroll */
+  .tv-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f4ee;
+    border-radius: 10px;
+    overflow-y: auto;                /* 👈 Vertical scroll */
+    scroll-behavior: smooth;         /* 👈 Smooth scrolling */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 1rem;
+  }
+  
+/* ___________🖥️ Inside the TV screen (scroll container) */
+.tv-scrollbox {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  /* 🔧 Optional scrollbar styling */
+  .tv-scrollbox::-webkit-scrollbar {
+    width: 8px;
+  }
+  .tv-scrollbox::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  .tv-scrollbox::-webkit-scrollbar-track {
+    background: #e0ded8;
+    border-radius: 10px;
+  }
+  
+
+  /* Style scrollbar (optional but cool) */
+  .tv-screen::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .tv-screen::-webkit-scrollbar-track {
+    background: #e0ded8;
+    border-radius: 10px;
+  }
+  
+  .tv-screen::-webkit-scrollbar-thumb {
+    background-color: #a9a49a;
+    border-radius: 10px;
+    border: 2px solid #f6f4ee;
+  }
+  
+  /* Each skill group */
+  .skill-slide {
+    font-size: 1.5rem;
+    font-family: 'Courier New', monospace;
+    color: #28282b;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 1px dashed #999;
+    text-align: center;
+  }
+  
+  
+
+  /* Optional Scanline Overlay______________glitchy thing */
+  .tv-screen::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+    pointer-events: none;
+    z-index: 3;
+    mix-blend-mode: multiply;
+  }
+  
+
+/*_________________________________________________________________________________________________________________________________________________________________________________-*/
+/* Exp section CSS */
+.exp-nav {
+    font-size: 2rem;
+    color: #28282b;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline; /* ← simple underline */
+    transition: opacity 0.3s ease;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+  }
+  
+  .exp-nav:hover {
+    opacity: 0.7;
+  }
+  
+  
+#exp-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 20px;
+  }
+  
+  #exp-section:hover {
+    border: none; /* Remove old hover border for a cleaner card look */
+  }
+  
+  .exp-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #c5bfb2;
+  }
+  
+  /* Card Container */
+  .exp-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  
+  /* Flip Card Core */
+  .flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 320px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Card Faces */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flip-card-front {
+    background-color: #28282b;
+    color: #c5bfb2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .company-name {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  /* Back Side */
+  .flip-card-back {
+    background-color: #c5bfb2;
+    color: #28282b;
+    transform: rotateY(180deg);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border: 1px solid #28282b;
+    opacity: 0.95;
+  }
+  
+/*_________________________________________________________________________________________________________________________________________________________________________________-*/
+/* Hnor section CSS */
+#honor-section {
+    background-color: #c5bfb2;
+    padding: 4rem 2rem;
+    color: #28282b;
+  }
+  
+  .timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #28282b; /* Dark line */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 50%;
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+    transform: translateX(-80px);
+  }
+  
+  .timeline-item.right {
+    left: 50%;
+    transform: translateX(80px);
+  }
+  
+  .timeline-item .timeline-content {
+    background-color: #28282b; /* Dark card */
+    color: #f6f4ee;            /* Light text */
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #28282b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .timeline-item h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #f6f4ee;
+  }
+  
+  .timeline-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Appear animation */
+  .timeline-item.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Heading same as Experience */
+  .exp-nav {
+    font-size: 2.2rem;
+    color: #28282b;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+/*_________________________________________________________________________________________________________________________________________________________________________________-*/
+#contact-section {
+    background-image: url("images/lot2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    width: 100vw;                /* FULL SCREEN WIDTH */
+    min-height: 100vh;           /* Take full height if needed */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 3rem 0;
+    margin: 0;
+    color: #d3cbb9;
+    position: relative;
+
+    /* REMOVE OUTER GAPS */
+    box-sizing: border-box;
+    overflow: hidden;
+
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 0;         /* prevent inner padding from pushing */
+    margin-bottom: 0;          /* ensure no outer spacing below */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;/* Prevent horizontal scroll from overflow */
+}
+
+
+
+#contact-section div {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40%;
+    padding: 20px;
+    line-height: 2rem;
+    color: #ffffff;
+    transition: none; /* Remove transition for scaling */
+}
+
+#contact-section div:hover {
+    /*changing background color */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+  /* footer ends here */
